@@ -1,5 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var ReactRouter = require('react-router');
+
+var browserHistory = ReactRouter.browserHistory;
+var Route = ReactRouter.Route;
+var Router = ReactRouter.Router;
+var Link = ReactRouter.Link;
 
 var samples = require('./sample-data');
 
@@ -145,4 +151,4 @@ var Store = React.createClass({
   }
 });
 
-ReactDOM.render(<App/>, document.getElementById('main'));
+ReactDOM.render(<Router history={browserHistory}/>, document.getElementById('main'));
